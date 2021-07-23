@@ -4,17 +4,20 @@
   "description": "Basic template for a Foundation for Emails project.",
   "repository": "zurb/foundation-emails-template",
   "main": "gulpfile.babel.js",
+  "homepage": "https://istiak92.github.io/Email-template-kayeki",
   "scripts": {
     "start": "gulp",
     "build": "gulp --production",
     "zip": "gulp zip --production",
     "litmus": "gulp litmus --production",
-    "mail": "gulp mail --production"
+    "mail": "gulp mail --production",
+    "deploy": "gh-pages -d dist"
   },
   "author": "ZURB <foundation@zurb.com>",
   "license": "MIT",
   "dependencies": {
     "foundation-emails": "^2.3.1",
+    "gh-pages": "^3.2.3",
     "sass": "^1.32.8"
   },
   "devDependencies": {
