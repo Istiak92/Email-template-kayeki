@@ -1,0 +1,55 @@
+---
+layout: kayak
+subject: Great Deals Today
+---
+<container>
+    <row>
+        <columns class="deal_of_day">
+            <h2>Deal of The Day</h2>
+            <img src="{{kayakEmail.dealOfTheDay.image}}" alt="">
+            <p>{{kayakEmail.dealOfTheDay.location}}: {{kayakEmail.dealOfTheDay.description}}</p>
+            <span class="save_amount">{{kayakEmail.dealOfTheDay.saveAmount}}</span>
+            <span class="tiny_info">{{kayakEmail.dealOfTheDay.tinyInfo}}</span>
+            <span class="price">{{kayakEmail.dealOfTheDay.price}}+</span>
+            <a href="{{kayakEmail.dealOfTheDay.link}}" class="button">See deal</a>
+        </columns>
+    </row>
+</container>
+<container>
+    <row>
+        <columns class="content_area">
+            {{#each kayakEmail.offers}}
+            <row class="offer">
+                <columns>
+                    <img src="{{this.image}}" alt="">
+                    <p>{{this.description}} </p>
+                    <span class="save_amount">{{this.saveAmount}}</span>
+                    <span class="tiny_info">{{this.tinyInfo}}</span>
+                    <span class="price">{{this.price}}+</span>
+
+                    <a href="{{this.link}}" class="button">See deal</a>
+
+                </columns>
+            </row>
+            {{/each}}
+        </columns>
+    </row>
+</container>
+<container>
+    <row>
+        <columns class="content_area content-area-last">
+            <row class="offer last-offer">
+                <columns>
+                    <row>
+                        <columns>
+                            <img src="{{ root }}/assets/img/kayak_files/airplane_dark.png" class="group_icons" alt="">
+                        </columns>
+                    </row>
+                    <h4>Still looking? There's more </h4>
+                    <p>Search hundreads of deals to suit your budget on flights, packages, cruses, and munch more.</p>
+                    <a href="#" class="button">See deal</a>
+                </columns>
+            </row>
+        </columns>
+    </row>
+</container>
